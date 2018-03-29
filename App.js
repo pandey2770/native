@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Button, View, Alert } from 'react-native';
+import { StyleSheet, Button, View, Alert,Text } from 'react-native';
 
 export default class App extends React.Component {
   home() {
@@ -15,6 +15,7 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <View style={styles.bg}>
       <View style={styles.container}>        
         <Button
           onPress={this.home}
@@ -26,8 +27,10 @@ export default class App extends React.Component {
         />
         <Button
           onPress={this.setting}
-          title="Setting"
+          title="login"
         />
+      </View>
+      <Text>jahskdjha</Text>
       </View>
     );
   }
@@ -40,4 +43,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent: 'space-between',
   },
+  bg: {
+    backgroundColor:'#fffae6',
+  }
 });
